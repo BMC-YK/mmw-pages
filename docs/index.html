@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS 4641 - Group 87</title>
+    <style>
+      body {
+        background-color: #333; /* Dark gray background */
+        color: white; /* White text */
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      .page-header {
+        text-align: center; /* Center the header */
+        margin-bottom: 20px;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #007bff; /* Button background color */
+        color: white; /* Button text color */
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+      }
+      table {
+        color: white;
+        border: 5px solid white;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">CS 4641 (GaTech Fall 2024) - Group 87</h1>
+      <h2 class="project-tagline">
+        Project: Forecasting Water Contaminants: A Machine Learning Approach for
+        Tribal Safety
+      </h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <p>Members:</p>
+      <ol>
+        <li>(Alistair) Charity Tarver</li>
+        <li>Bryant Morales Chora</li>
+        <li>Erika Tay</li>
+        <li>(Candice) Ying Tzu Chen</li>
+      </ol>
+      <h1 id="proposal">Project Proposal:
+       <a href="midterm.html" class="btn">Midterm Proposal -></a>
+      </h1>
+      <h2 id="introduction">Introduction/Background:</h2>
+      <p>
+        Safe drinking water is a fundamental right, yet many Native American
+        communities struggle to ensure water quality. Research indicates serious
+        health risks from contaminants, such as lead for instance, which can
+        lead to developmental disorders and increased cancer risks [1]. The
+        "2021 Report to the Congress of the United States on Sanitation
+        Deficiencies for Indian Homes and Communities" reveals many tribal
+        households lack reliable access to clean water, heightening public
+        health concerns [2]. Environmental health initiatives emphasize urgent
+        need for improved water, with continued posed risks [3]. Our data set
+        consists of, the USGS National Water Information System (NWIS), the
+        Water Quality Portal, and many more cross referenced with tribal water
+        dependency locations using the Bureau of Indian Affairs resources to
+        assess geographic areas.
+      </p>
+      <h2 id="problem-definition">Problem Definition:</h2>
+      <p>
+        The absence of effective predictive tools for water quality damages the
+        ability of Native American communities and policymakers to respond to
+        contamination events. Traditional monitoring methods often fail to
+        provide timely alerts about rising pollutant levels, resulting in
+        delayed responses, threatening public health, and highlighting the need
+        for technological solutions enhancing water safety.
+      </p>
+      <p>
+        This proposal aims to develop a machine learning model using neural
+        networks to predict levels of specific water pollutants in sources
+        relied upon by Native American communities. By leveraging historical
+        data and environmental variables, the model seeks to identify trends and
+        potential spikes in contamination. Such capabilities will empower
+        communities to take proactive measures, reducing health risks, and
+        thereby improving the overall well-being of the populations.
+      </p>
+      <h2 id="preprocessing">Data Preprocessing Methods:</h2>
+      <ol>
+        <li>
+          <strong>Data Cleaning</strong>: Removing duplicate entries is
+          essential so the model learns from varied examples. Duplicates can
+          mislead the training process, resulting in inaccurate predictions
+          about water quality.
+        </li>
+        <li>
+          <strong>Normalization</strong>: This step adjusts all data features to
+          a similar scale. It prevents any one factor, like a particular
+          pollutant, from overly influencing the model’s predictions, leading to
+          more balanced and accurate forecasts.
+        </li>
+        <li>
+          <strong>Data Splitting</strong>: The dataset is divided into training
+          and testing portions. This allows us to evaluate how well the model
+          performs on new, unseen data. Quick and reliable predictions on water
+          quality are crucial for communities to respond effectively to
+          potential health risks.
+        </li>
+      </ol>
+      <h2 id="models">ML Algorithms/Models:</h2>
+      <li>
+        <strong>Decision Trees</strong>: Using a simple and intuitive approach,
+        this model helps capture complex relationships between various factors
+        affecting water quality. Its straightforward setup saves time, allowing
+        us to focus on refining its accuracy.
+      </li>
+      <li>
+        <strong>Random Forest</strong>: This model enhances prediction accuracy
+        and minimizes errors by considering multiple decision trees. It also
+        helps identify which factors are most significant in affecting water
+        quality, guiding effective pollution control measures.
+      </li>
+      <li>
+        <strong>Neural Networks</strong>: By using advanced techniques, we can
+        build models that improve as more data is added. These networks are
+        particularly good at understanding complicated relationships between
+        pollutants and environmental conditions, leading to better predictions
+        and faster community responses.
+      </li>
+      <h2 id="potential">(Potential) Results and Discussion:</h2>
+      <ol>
+        <li>
+          <strong>R-squared (R²)</strong>: Aim for R² ≥ 0.8, indicating the
+          model explains at least 80% of the variability in toxin levels.
+        </li>
+        <li>
+          <strong>Root Mean Squared Error (RMSE)</strong>: Target RMSE < 10 µg/L
+          for pollutants to demonstrate robust predictive capabilities.
+        </li>
+        <li>
+          <strong>Mean Absolute Error (MAE)</strong>: Achieve MAE < 5 µg/L for
+          heavy metals like lead and arsenic, ensuring predictive accuracy.
+        </li>
+        <li>
+          <strong>Enhance Local Monitoring Capacity</strong>: Localizing the
+          model will empower communities to engage in ongoing water quality
+          monitoring and decision-making.
+        </li>
+      </ol>
+      <h2 id="references">References:</h2>
+      <ol>
+        <li>
+          [1] M. Hanna-Attisha et al., "Elevated Blood Lead Levels in Children
+          Associated with the Flint Drinking Water Crisis: A Spatial Analysis of
+          the Flint Water Study," American Journal of Public Health, vol. 106,
+          no. 2, pp. 283-290, 2016. [Online]. Available:
+          https://ajph.aphapublications.org/doi/10.2105/AJPH.2015.303003.
+        </li>
+        <li>
+          [2] U.S. Indian Health Service, "2021 Report to the Congress of the
+          United States on Sanitation Deficiencies for Indian Homes and
+          Communities," 2021. [Online]. Available:
+          https://www.ihs.gov/sites/newsroom/themes/responsive2017/display_objects/documents/2021RTCSanitationDeficienciesReport.pdf.
+        </li>
+        <li>
+          [3] Centers for Disease Control and Prevention, "Office of Tribal
+          Affairs Addresses Environmental Health in Native American
+          Communities," 2013. [Online]. Available:
+          https://blogs.cdc.gov/yourhealthyourenvironment/2013/11/22/office-of-tribal-affairs-addresses-environmental-health-in-native-american-communities/.
+        </li>
+        <li>
+          U.S. Department of Agriculture, "Census of Agriculture," USDA.
+          [Online]. Available: https://www.nass.usda.gov/.
+        </li>
+        <li>
+          U.S. Geological Survey, "National Water Information System," USGS.
+          [Online]. Available: https://nwis.waterdata.usgs.gov/nwis/.
+        </li>
+      </ol>
+      <h2 id="gantt">Gantt Chart and Contribution Table:</h2>
+      <img src="gantt_chart.png" width="1000" height="600" />
+      <p>
+      <a href="https://docs.google.com/spreadsheets/d/15iGuCyTPmZhIt0u7HUk798zQJvA7JMVNRaQtInSvehs/edit?gid=1009064989#gid=1009064989">Link to complete Gantt Chart</a>
+      </p>
+      <img src="contribution_table.png" width="600"/>
+      <br>
+
+    <a href="https://github.gatech.edu/ctarver3/CS4641_Group87" class="btn"
+      >Link to Github Project</a
+    >
+
+    <p>I'm hosted with GitHub Pages.</p>
+  </body>
+</html>
